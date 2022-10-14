@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+.list {
+  list-style: none;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -51,11 +55,6 @@ img {
 }
 
 .container-nav .nav {
-  display: flex;
-  align-items: center;
-}
-
-.container-nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,15 +101,20 @@ img {
   color: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
 /* site-nav list*/
 .site-nav {
   display: flex;
   margin-left: 93px;
   padding-left: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 .site-nav .item + .item {
@@ -124,53 +128,55 @@ img {
   padding-bottom: 32px;
 }
 
-.contacts-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link-current {
+  color: var(--accent-color);
 }
 
 .contacts-nav {
   display: flex;
+  align-items: center;
   margin-left: auto;
   padding-left: 0;
 }
 
-.contacts-nav .item + .item {
-  margin-left: 50px;
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.site-nav a,
-.contacts-nav a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.contacts-nav a {
+.contacts-nav-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  fill: currentColor;
+  gap: 10px;
 }
 
-.site-nav .link-current,
-.contacts-nav .link-current {
-  color: var(--accent-color);
+.contacts-icon {
+  margin-right: 10px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
+.contacts-nav .item + .item {
+  margin-left: 50px;
+}
+
+.contacts-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .contacts-nav .link:hover,
-.contacts-nav .link:focus {
+.contacts-nav .link:focus,
+.contacts-nav .link-current {
   color: var(--accent-color);
 }
 
