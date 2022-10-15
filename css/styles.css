@@ -42,10 +42,6 @@ img {
   height: auto;
 }
 
-.list {
-  list-style: none;
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +51,11 @@ img {
 }
 
 .container-nav .nav {
+  display: flex;
+  align-items: center;
+}
+
+.container-nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,20 +102,15 @@ img {
   color: var(--accent-color);
 }
 
+.list {
+  list-style: none;
+}
+
 /* site-nav list*/
 .site-nav {
   display: flex;
   margin-left: 93px;
   padding-left: 0;
-}
-
-.site-nav a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
 }
 
 .site-nav .item + .item {
@@ -128,64 +124,78 @@ img {
   padding-bottom: 32px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link-current {
-  color: var(--accent-color);
+.site-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 .contacts-nav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-left: auto;
   padding-left: 0;
+  margin-left: auto;
 }
 
-.contacts-list {
+.contacts-nav .link {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.contacts-nav-link {
-  display: flex;
-  align-items: center;
+.contacts-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  fill: currentColor;
-  gap: 10px;
 }
 
-.contacts-icon {
+.mail-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts-nav .item + .item {
   margin-left: 50px;
 }
 
-.contacts-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.site-nav .link-current,
+.contacts-nav .link-current {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
 }
 
 .contacts-nav .link:hover,
-.contacts-nav .link:focus,
-.contacts-nav .link-current {
+.contacts-nav .link:focus {
   color: var(--accent-color);
 }
 
 /* Hero */
 .hero {
   background-color: var(--dark-background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/Hero.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
   text-align: center;
+  justify-content: center;
+
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
