@@ -19,6 +19,8 @@
   --dark-background-color: #2f303a;
   --border-portfolio-card: #eeeeee;
   --border-portfolio-header: #ececec;
+  --social-icon-color: #afb1b8;
+  --social-icon-hover-color: #ffffff;
   --primary-font: 'Roboto';
   --logo-font: 'Raleway';
 }
@@ -190,7 +192,6 @@ img {
   background-position: 50%;
   text-align: center;
   justify-content: center;
-
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -244,6 +245,16 @@ img {
 
 .features-list {
   width: 270px;
+}
+
+.features-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
 }
 
 .features-title {
@@ -332,7 +343,7 @@ img {
 
 .team-div {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   background-color: var(--primary-background-color);
 }
 
@@ -353,11 +364,49 @@ img {
   margin-top: 10px;
 }
 
+.social {
+  padding-bottom: 30px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  gap: 10px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.social-icon {
+  fill: var(--social-icon-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--social-icon-hover-color);
+  border-color: var(--social-icon-hover-color);
+}
+
 /* footer */
 .footer {
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-logo {
   display: flex;
