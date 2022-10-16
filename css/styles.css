@@ -20,7 +20,7 @@
   --border-portfolio-card: #eeeeee;
   --border-portfolio-header: #ececec;
   --social-icon-color: #afb1b8;
-  --social-icon-hover-color: #ffffff;
+  --social-icon-white-color: #ffffff;
   --primary-font: 'Roboto';
   --logo-font: 'Raleway';
 }
@@ -366,6 +366,7 @@ img {
 
 .social {
   padding-bottom: 30px;
+  background-color: inherit;
 }
 
 .social-list {
@@ -395,11 +396,49 @@ img {
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
-  fill: var(--social-icon-hover-color);
-  border-color: var(--social-icon-hover-color);
+  fill: var(--social-icon-white-color);
+  border-color: var(--social-icon-white-color);
+}
+
+/* Постійні клієнти */
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.customers-main {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  gap: 30px;
+}
+
+.customers-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: var(--social-icon-color);
+  margin-bottom: 94px;
+}
+
+.customers-list:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* footer */
+
 .footer {
   background-color: var(--dark-background-color);
   padding-top: 60px;
@@ -408,6 +447,12 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.footer-position {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-logo {
   display: flex;
   text-decoration: none;
@@ -449,6 +494,54 @@ img {
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.foter-social-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  margin-bottom: 20px;
+}
+
+.social-footer {
+}
+
+.social-list-footer {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  gap: 10px;
+}
+
+.social-link-footer {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon-footer {
+  fill: var(--social-icon-white-color);
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link-footer:hover .social-icon,
+.social-link-footer:focus .social-icon {
+  border-color: var(--social-icon-white-color);
 }
 
 /* Portfolio */
@@ -513,6 +606,12 @@ img {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-img {
